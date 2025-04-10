@@ -1,0 +1,39 @@
+{
+  "name": "pizzashop-api",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/http/server.ts",
+    "build": "bun build src/http/server.ts --target bun --outdir ./dist",
+    "start": "NODE_ENV=production bun dist/http/server.js",
+    "test": "bun test",
+    "generate": "drizzle-kit generate",
+    "migrate": "bun src/db/migrate.ts",
+    "seed": "bun src/db/seed.ts",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@faker-js/faker": "^9.6.0",
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "drizzle-kit": "^0.30.5",
+    "eslint": "^9.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.28.0"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "chalk": "^5.4.1",
+    "drizzle-orm": "^0.41.0",
+    "elysia": "^1.2.25",
+    "pg": "^8.14.1",
+    "postgres": "^3.4.5",
+    "zod": "^3.24.2"
+  }
+}

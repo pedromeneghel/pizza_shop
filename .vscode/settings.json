@@ -1,0 +1,24 @@
+{
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "always"
+  },
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "typescript, javascript"
+  ],
+  "javascript.format.enable": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "typescript.format.enable": true,
+  "typescript.validate.enable": true,
+  "files.exclude": {
+    ".nyc_output": true,
+    "coverage": true,
+    "dist": true,
+    "node_modules": true
+  }
+}

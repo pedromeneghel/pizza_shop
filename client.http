@@ -1,0 +1,20 @@
+@host = localhost:3333
+
+### Add Restaurant
+POST http://{{host}}/restaurants
+Content-Type: application/json
+
+{
+  "restaurantName": "Restaurante do Paçoca",
+  "managerName": "João Paçoca Meneghel",
+  "email": "pacoca@email.com",
+  "phone": "48999999999"
+}
+
+### Send Authentication Code for Email
+POST http://{{host}}/authenticate
+Content-Type: application/json
+
+{
+  "email": "pacoca@email.com"
+}
