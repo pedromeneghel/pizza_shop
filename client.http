@@ -18,3 +18,12 @@ Content-Type: application/json
 {
   "email": "pacoca@email.com"
 }
+
+
+### Get authenticate link
+GET http://{{host}}/auth-links/authenticate?code=xq3bim677pm3jv95i6655eq3&r=http://localhost:5173
+Content-Type: application/json
+
+### Sign out
+POST http://{{host}}/sign-out
+Content-Type: application/json

@@ -11,7 +11,8 @@ const envSchema = z.object({
   DATABASE_PORT: z.string().min(1),
   DATABASE_USER: z.string().min(1),
   DATABASE_PASSWORD: z.string().min(1),
-  DATABASE_NAME: z.string().min(1)
+  DATABASE_NAME: z.string().min(1),
+  JWT_SECRET_KEY: z.string().min(1)
 });
 
 export const env = envSchema.parse(process.env);
