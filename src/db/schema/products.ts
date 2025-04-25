@@ -11,8 +11,8 @@ export const products = pgTable("products", {
   restaurantId: text("restaurant_id").notNull().references(() => restaurants.id, {
     onDelete: 'cascade'
   }),
-  created_at: timestamp("created_at").notNull().defaultNow(),
-  updated_at: timestamp("updated_at").notNull().defaultNow()
+  createAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow()
 });
 
 export const orderItemsRelations = relations(ordersItems, ({ one }) => {

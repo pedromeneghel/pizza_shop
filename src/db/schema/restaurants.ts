@@ -8,8 +8,8 @@ export const restaurants = pgTable("restaurants", {
   name: text("name").notNull(),
   description: text("description"),
   managerId: text('manager_id').references(() => users.id, { onDelete: 'set null' }),
-  created_at: timestamp("created_at").notNull().defaultNow(),
-  updated_at: timestamp("updated_at").notNull().defaultNow()
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow()
 });
 
 export const restaurantsRelations = relations(restaurants, ({ one, many }) => {

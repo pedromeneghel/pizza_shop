@@ -15,12 +15,12 @@ export const orders = pgTable("orders", {
   customerId: text("customer_id").notNull().references(() => users.id, {
     onDelete: 'set null'
   }),
-  restaurantId: text("restaurant_id").notNull().references(() => users.id, {
+  restaurantId: text("restaurant_id").notNull().references(() => restaurants.id, {
     onDelete: 'cascade'
   }),
   status: orderStatusEnum('status').default('pending').notNull(),
   totalPriceInCents: integer("total_price_in_cents").notNull(),
-  created_at: timestamp("created_at").notNull().defaultNow()
+  createdAt: timestamp("created_at").notNull().defaultNow()
 });
 
 export const ordersRelations = relations(orders, ({ one, many }) => {

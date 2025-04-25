@@ -12,5 +12,5 @@ export const ordersItems = pgTable("orders_items", {
   }),
   priceInCents: integer("price_in_cents").notNull(),
   quantity: integer("quantity").notNull(),
-  created_at: timestamp("created_at").notNull().defaultNow()
+  createdAt: timestamp("created_at").notNull().defaultNow()
 });
